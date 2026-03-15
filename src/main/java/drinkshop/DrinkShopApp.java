@@ -1,4 +1,4 @@
-package drinkshop.ui;
+package drinkshop;
 
 import drinkshop.domain.*;
 import drinkshop.repository.Repository;
@@ -7,6 +7,7 @@ import drinkshop.repository.file.FileProductRepository;
 import drinkshop.repository.file.FileRetetaRepository;
 import drinkshop.repository.file.FileStocRepository;
 import drinkshop.service.DrinkShopService;
+import drinkshop.ui.DrinkShopController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -28,7 +29,7 @@ public class DrinkShopApp extends Application {
 
         // ---------- Incarcare FXML ----------
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("drinkshop.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ui/drinkshop.fxml"));
         Scene scene = new Scene(loader.load());
 
         // ---------- Setare Service in Controller ----------

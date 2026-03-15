@@ -120,16 +120,23 @@ public class DrinkShopController {
             alert.showAndWait();
             return;
         }else
-        if (service.getAllProducts().stream().filter(p->p.getId()==r.getId()).toList().size()>0) {
+        if (!service.getAllProducts().stream().filter(p->p.getId()==r.getId()).toList().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error");
             alert.setHeaderText("Exista un produs cu reteta adaugata.");
             alert.showAndWait();
             return;
         }
+        Double price = 0.00;
+        try{
+            price = Double.parseDouble(txtProdPrice.getText());
+        }
+        catch (NumberFormatException e){
+            showError("Pretul este un numar pozitiv!");
+        }
         Product p = new Product(r.getId(),
                 txtProdName.getText(),
-                Double.parseDouble(txtProdPrice.getText()),
+                price,
                 comboProdCategorie.getValue(),
                 comboProdTip.getValue());
         service.addProduct(p);
@@ -140,8 +147,15 @@ public class DrinkShopController {
     private void onUpdateProduct() {
         Product selected = productTable.getSelectionModel().getSelectedItem();
         if (selected == null) return;
+        Double price = 0.00;
+        try{
+            price = Double.parseDouble(txtProdPrice.getText());
+        }
+        catch (NumberFormatException e){
+            showError("Pretul este un numar pozitiv!");
+        }
         service.updateProduct(selected.getId(), txtProdName.getText(),
-                Double.parseDouble(txtProdPrice.getText()),
+                price,
                 comboProdCategorie.getValue(), comboProdTip.getValue());
         initData();
     }
@@ -167,8 +181,30 @@ public class DrinkShopController {
     // ---------- RETETA NOUA ----------
     @FXML
     private void onAddNewIngred() {
-        newRetetaList.add(new IngredientReteta(txtNewIngredName.getText(),
-                Double.parseDouble(txtNewIngredCant.getText())));
+        String name = txtNewIngredName.getText();
+        String cantitateRaw = txtNewIngredCant.getText();
+
+        if (name == null || name.isBlank() || cantitateRaw == null || cantitateRaw.isBlank()) {
+            showError( "Toate campurile pentru ingredient trebuie completate!");
+            return;
+        }
+
+        try {
+            double cantitate = Double.parseDouble(cantitateRaw.replace(",", "."));
+
+            if (cantitate <= 0) {
+                showError( "Cantitatea trebuie sa fie un numar pozitiv!");
+                return;
+            }
+
+            newRetetaList.add(new IngredientReteta(name, cantitate));
+
+            txtNewIngredName.clear();
+            txtNewIngredCant.clear();
+
+        } catch (NumberFormatException e) {
+            showError("Cantitatea trebuie sa fie un numar valid (ex: 10.5)!");
+        }
     }
 
     @FXML

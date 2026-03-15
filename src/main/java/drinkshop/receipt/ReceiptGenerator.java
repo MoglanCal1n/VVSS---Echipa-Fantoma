@@ -7,6 +7,10 @@ import drinkshop.domain.Product;
 import java.util.List;
 
 public class ReceiptGenerator {
+
+    private ReceiptGenerator() {
+
+    }
     public static String generate(Order o, List<Product> products) {
         StringBuilder sb = new StringBuilder();
         sb.append("===== BON FISCAL =====\n").append("Comanda #").append(o.getId()).append("\n");
