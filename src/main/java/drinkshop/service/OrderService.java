@@ -31,8 +31,6 @@ public class OrderService {
     }
 
     public List<Order> getAllOrders() {
-//        return StreamSupport.stream(orderRepo.findAll().spliterator(), false)
-//                .collect(Collectors.toList());
         return orderRepo.findAll();
     }
 
@@ -41,9 +39,9 @@ public class OrderService {
     }
 
     public double computeTotal(Order o) {
-        return o.getItems().stream()
-                .mapToDouble(i -> productRepo.findOne(i.getProduct().getId()).getPret() * i.getQuantity())
-                .sum();
+        o.computeTotalPrice();
+        return o.getTotalPrice();
+        // we already have the function which computes the total price of an order in the model
     }
 
     public void addItem(Order o, OrderItem item) {

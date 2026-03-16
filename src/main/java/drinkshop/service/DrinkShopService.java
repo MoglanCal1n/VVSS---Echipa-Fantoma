@@ -103,5 +103,8 @@ public class DrinkShopService {
 
     public void deleteReteta(int id) {
         retetaService.deleteReteta(id);
+        if(productService.findById(id) != null) {
+            productService.deleteProduct(id);
+        }
     }
 }

@@ -17,8 +17,10 @@ public class RetetaValidator implements Validator<Reteta> {
             errors.accumulateAndGet("Product ID invalid!\n", String::concat);
 
         List<IngredientReteta> ingrediente = reteta.getIngrediente();
-        if (ingrediente == null || ingrediente.isEmpty())
+        if (ingrediente == null || ingrediente.isEmpty()) {
             errors.accumulateAndGet("Ingrediente empty!\n", String::concat);
+            return;
+        }
 
         ingrediente.stream()
                 .filter(entry -> entry.getCantitate() <= 0)

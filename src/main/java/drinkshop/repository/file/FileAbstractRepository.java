@@ -11,7 +11,7 @@ public abstract class FileAbstractRepository<ID, E>
 
     public FileAbstractRepository(String fileName) {
         this.fileName = fileName;
-        //loadFromFile();
+       // loadFromFile();
     }
 
     protected void loadFromFile() {
@@ -23,7 +23,23 @@ public abstract class FileAbstractRepository<ID, E>
                 super.save(entity);
             }
 
-        } catch (IOException e) {
+        }
+        /*added FileNotFoundException handler, which creates a file with the name provided,
+        according to the modified requirements
+         */
+
+        catch (FileNotFoundException e) {
+            File f = new File(fileName);
+            try{
+                if(f.createNewFile()){
+                    System.out.println("File created with name " + f.getName());
+                }
+            }
+            catch (IOException ex){
+                ex.printStackTrace();
+            }
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
