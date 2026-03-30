@@ -46,6 +46,16 @@ class ProductUpdateTest {
     }
 
     // ==========================================
+    // Cautam produsul dupa ID-ul Dummy, apoi verificam daca are field-urile actualizate
+    // ==========================================
+    void assertIsUpdated(String nume, double pret){
+        Product prod = productRepo.findOne(dummyId);
+        assertNotNull(prod, "Produsul nu a fost gasit in baza de date dupa update!");
+        assertEquals(nume, prod.getNume(), "Numele nu s-a updatat corect!");
+        assertEquals(pret, prod.getPret(), "Pretul nu s-a updatat corect!");
+    }
+
+    // ==========================================
     // 1. TESTE ECP (Equivalence Class Partitioning)
     // ==========================================
 
@@ -61,6 +71,8 @@ class ProductUpdateTest {
         assertDoesNotThrow(() -> {
             productService.updateProduct(dummyId, validName, validPrice, dummyCategorie, dummyTip);
         });
+
+        assertIsUpdated(validName, validPrice);
     }
 
     @ParameterizedTest
@@ -95,6 +107,8 @@ class ProductUpdateTest {
         assertDoesNotThrow(() -> {
             productService.updateProduct(dummyId, dummyName, boundaryPrice, dummyCategorie, dummyTip);
         });
+
+        assertIsUpdated(dummyName, boundaryPrice);
     }
 
     @ParameterizedTest
