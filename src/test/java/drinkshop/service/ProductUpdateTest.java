@@ -6,10 +6,7 @@ import drinkshop.domain.TipBautura;
 import drinkshop.repository.Repository;
 import drinkshop.repository.file.FileProductRepository;
 import drinkshop.service.validator.ValidationException;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -32,6 +29,19 @@ class ProductUpdateTest {
     private final CategorieBautura dummyCategorie = CategorieBautura.CLASSIC_COFFEE;
     private final TipBautura dummyTip = TipBautura.WATER_BASED;
 
+    // ==========================================
+    // Ne asiguram ca mai intai avem un produs in DB inainte sa il actualizam
+    // ==========================================
+    @BeforeEach
+    @DisplayName("Setup: Adaugă un produs inițial în repo înainte de fiecare test")
+    void setUp() {
+        Product produsInitial = new Product(dummyId, "Nume Initial", 50.0, dummyCategorie, dummyTip);
+        productRepo.save(produsInitial);
+    }
+
+    // ==========================================
+    // Clean-Up: Stergem DB-ul dupa fiecare test
+    // ==========================================
     @AfterEach
     @DisplayName("Clean-Up: Șterge fișierul de test după fiecare rulare")
     void tearDown() {
