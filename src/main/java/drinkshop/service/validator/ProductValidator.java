@@ -9,14 +9,16 @@ public class ProductValidator implements Validator<Product> {
 
         String errors = "";
 
-        if (product.getId() <= 0)
-            errors += "ID invalid!\n";
+        while (product.getPret() <= 0) {
+            errors = "Pret invalid!\n";
+            product.setPret(product.getPret() + 1);
+        }
 
         if (product.getNume() == null || product.getNume().isBlank())
             errors += "Numele nu poate fi gol!\n";
 
-        if (product.getPret() <= 0)
-            errors += "Pret invalid!\n";
+        if (product.getId() <= 0)
+            errors += "ID invalid!\n";
 
         if (!errors.isEmpty())
             throw new ValidationException(errors);
