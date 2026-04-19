@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81902bd0-7eb0-4397-8818-a6e1f5e99674" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/RepositoryException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/ServiceException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/drinkshop/service/ProductUpdateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/drinkshop/service/validator/ProductValidatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/CategorieBautura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/CategorieBautura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/IngredientReteta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/IngredientReteta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/OrderItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/Reteta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/Reteta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/Stoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/Stoc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/domain/TipBautura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/domain/TipBautura.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/export/CsvExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/export/CsvExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/receipt/ReceiptGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/receipt/ReceiptGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/reports/DailyReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/reports/DailyReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/AbstractRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/AbstractRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileAbstractRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileAbstractRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileOrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileOrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileRetetaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileRetetaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileStocRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/repository/file/FileStocRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/DrinkShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/DrinkShopService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/RetetaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/RetetaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/StocService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/StocService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/OrderItemValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/OrderItemValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/OrderValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/OrderValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/ProductValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/ProductValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/RetetaValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/RetetaValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/StocValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/StocValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/ValidationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/ValidationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/service/validator/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/ui/DrinkShopApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/DrinkShopApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/drinkshop/ui/DrinkShopController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/drinkshop/ui/DrinkShopController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/drinkshop/domain/ProductTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/drinkshop/domain/ProductTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3B3sqOhdeDhQ6yRJ0Rz3MuPMK6m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ProductUpdateTest.executor": "Run",
+    "JUnit.ProductValidatorTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ioana/IdeaProjects/VVSS---Echipa-Fantoma/docs/Lab02",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/Lab02" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="drinkshop.service" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81902bd0-7eb0-4397-8818-a6e1f5e99674" name="Changes" comment="" />
+      <created>1773729279627</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773729279627</updated>
+      <workItem from="1773729289219" duration="800000" />
+      <workItem from="1773730109920" duration="10000" />
+      <workItem from="1774813769487" duration="5257000" />
+      <workItem from="1774857491208" duration="2330000" />
+      <workItem from="1774869371151" duration="2186000" />
+      <workItem from="1774877047036" duration="16000" />
+      <workItem from="1775482973985" duration="225000" />
+      <workItem from="1776628365969" duration="307000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
