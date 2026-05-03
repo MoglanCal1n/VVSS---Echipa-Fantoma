@@ -8,8 +8,13 @@ module drinkshop {
     opens drinkshop to javafx.fxml, javafx.graphics;
     exports drinkshop;
 
-    opens drinkshop.domain to  javafx.base;
+    opens drinkshop.domain;
     exports drinkshop.domain;
     exports drinkshop.ui;
     opens drinkshop.ui to javafx.fxml;
+
+    exports drinkshop.repository;
+    opens drinkshop.repository;
+    exports drinkshop.service;
+    opens drinkshop.service;
 }
