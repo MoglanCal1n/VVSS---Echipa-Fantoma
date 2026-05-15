@@ -28,8 +28,8 @@ addProduct delega catre repo.save si trimite exact entitatea primita</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >drinkshop.service.ProductServiceMockTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >drinkshop.service.ProductServiceMockTest#addProduct_delegatesToRepository</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mvir3575_F01:  AdaugareProdus [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
@@ -41,8 +41,8 @@ addProduct salvează un Mock E &icirc;n Repository real</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >drinkshop.service.integration.SR_IntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >drinkshop.service.integration.SR_IntegrationTest#testAddProduct_WithRealRepo_AndMockEntity</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mvir3575_F01:  AdaugareProdus [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
@@ -54,8 +54,8 @@ Adăugare și regăsire folosind entități reale</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >drinkshop.service.integration.SRE_IntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >drinkshop.service.integration.SRE_IntegrationTest#testFullIntegration_AddAndRetrieveEntities</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mvir3575_F01:  AdaugareProdus [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
@@ -68,8 +68,8 @@ Update cu preț negativ este blocat de Validator</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >drinkshop.service.integration.SREV_IntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >drinkshop.service.integration.SREV_IntegrationTest#testUpdateProduct_InvalidData_ThrowsValidationException</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mvir3575_F02:  ActualizareProdus [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
