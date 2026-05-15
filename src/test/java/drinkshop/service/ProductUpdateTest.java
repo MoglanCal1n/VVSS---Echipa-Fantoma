@@ -7,8 +7,6 @@ import drinkshop.repository.Repository;
 import drinkshop.repository.file.FileProductRepository;
 import drinkshop.service.validator.ValidationException;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.File;
 
@@ -85,54 +83,71 @@ class ProductUpdateTest {
         assertIsUpdated(validName, validPrice);
     }
 
-    @ParameterizedTest
+    @Test
     @DisplayName("ECP Non-valid: Nume gol sau Preț negativ aruncă excepție")
-    @CsvSource({
-            ", 15.0",           // EC Non-valid: Nume null
-            "'   ', 15.0",      // EC Non-valid: Nume doar cu spații
-            "Latte, -5.0"       // EC Non-valid: Preț negativ
-    })
     @Tag("ECP")
-    void testUpdateProduct_InvalidECP_ShouldThrowException(String invalidName, double invalidPrice) {
-        ValidationException exception = assertThrows(ValidationException.class, () -> {
-            productService.updateProduct(dummyId, invalidName, invalidPrice, dummyCategorie, dummyTip);
-        });
+    void testUpdateProduct_InvalidECP_ShouldThrowException() {
+        // Înlocuim @CsvSource cu un array pentru TestLink
+        Object[][] testData = {
+                {null, 15.0},         // EC Non-valid: Nume null
+                {"   ", 15.0},        // EC Non-valid: Nume doar cu spații
+                {"Latte", -5.0}       // EC Non-valid: Preț negativ
+        };
 
+        for (Object[] data : testData) {
+            String invalidName = (String) data[0];
+            double invalidPrice = (double) data[1];
 
+            assertThrows(ValidationException.class, () -> {
+                productService.updateProduct(dummyId, invalidName, invalidPrice, dummyCategorie, dummyTip);
+            }, "A picat (nu a aruncat excepție) pentru datele: nume='" + invalidName + "', pret=" + invalidPrice);
+        }
     }
 
     // ==========================================
     // 2. TESTE BVA (Boundary Value Analysis)
     // ==========================================
 
-    @ParameterizedTest
+    @Test
     @DisplayName("BVA Valid: Limite de intrare valide")
-    @CsvSource({
-            "A, 0.01",   // Limită validă: nume format dintr-un caracter, preț minim pozitiv
-            "A, 100.0"   // Limită validă: nume minim, preț normal din clasa de echivalență
-    })
     @Tag("BVA")
-    void testUpdateProduct_ValidBVA_ShouldPass(String dummyName, double boundaryPrice) {
-        // Act & Assert
-        assertDoesNotThrow(() -> {
-            productService.updateProduct(dummyId, dummyName, boundaryPrice, dummyCategorie, dummyTip);
-        });
+    void testUpdateProduct_ValidBVA_ShouldPass() {
+        Object[][] testData = {
+                {"A", 0.01},   // Limită validă: nume format dintr-un caracter, preț minim pozitiv
+                {"A", 100.0}   // Limită validă: nume minim, preț normal din clasa de echivalență
+        };
 
-        assertIsUpdated(dummyName, boundaryPrice);
+        for (Object[] data : testData) {
+            String dummyName = (String) data[0];
+            double boundaryPrice = (double) data[1];
+
+            // Act & Assert
+            assertDoesNotThrow(() -> {
+                productService.updateProduct(dummyId, dummyName, boundaryPrice, dummyCategorie, dummyTip);
+            }, "A aruncat excepție pentru date valide: nume='" + dummyName + "', pret=" + boundaryPrice);
+
+            assertIsUpdated(dummyName, boundaryPrice);
+        }
     }
 
-    @ParameterizedTest
+    @Test
     @DisplayName("BVA Non-valid: Limite de intrare invalide")
-    @CsvSource({
-            "'', 10.0",   // Limită non-validă: lungime nume 0 (șir gol)
-            "A, 0.0",     // Limită non-validă: preț exact 0.0
-            "A, -0.01"    // Limită non-validă: preț imediat sub 0
-    })
     @Tag("BVA")
-    void testUpdateProduct_InvalidBVA_ShouldThrowException(String dummyName, double outOfBoundsPrice) {
-        // Act & Assert
-        assertThrows(ValidationException.class, () -> {
-            productService.updateProduct(dummyId, dummyName, outOfBoundsPrice, dummyCategorie, dummyTip);
-        });
+    void testUpdateProduct_InvalidBVA_ShouldThrowException() {
+        Object[][] testData = {
+                {"", 10.0},     // Limită non-validă: lungime nume 0 (șir gol)
+                {"A", 0.0},     // Limită non-validă: preț exact 0.0
+                {"A", -0.01}    // Limită non-validă: preț imediat sub 0
+        };
+
+        for (Object[] data : testData) {
+            String dummyName = (String) data[0];
+            double outOfBoundsPrice = (double) data[1];
+
+            // Act & Assert
+            assertThrows(ValidationException.class, () -> {
+                productService.updateProduct(dummyId, dummyName, outOfBoundsPrice, dummyCategorie, dummyTip);
+            }, "A picat (nu a aruncat excepție) pentru datele: nume='" + dummyName + "', pret=" + outOfBoundsPrice);
+        }
     }
 }
