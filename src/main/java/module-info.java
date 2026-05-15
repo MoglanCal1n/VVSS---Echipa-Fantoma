@@ -3,8 +3,6 @@ module drinkshop {
     requires javafx.fxml;
     requires javafx.base;
 
-    requires org.controlsfx.controls;
-
     opens drinkshop to javafx.fxml, javafx.graphics;
     exports drinkshop;
 
