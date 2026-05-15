@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81902bd0-7eb0-4397-8818-a6e1f5e99674" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/drinkshop/service/integration/SR_IntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drinkshop/receipt/ReceiptGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drinkshop/receipt/ReceiptGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drinkshop/repository/AbstractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drinkshop/repository/AbstractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drinkshop/repository/file/FileOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drinkshop/repository/file/FileOrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drinkshop/service/StocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drinkshop/service/StocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drinkshop/ui/DrinkShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drinkshop/ui/DrinkShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,39 +41,56 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DrinkShopApp.executor": "Run",
     "JUnit.ProductServiceMockTest.executor": "Run",
     "JUnit.ProductUpdateTest.executor": "Run",
     "JUnit.ProductValidatorTest.executor": "Run",
     "JUnit.SREV_IntegrationTest.executor": "Run",
     "JUnit.SRE_IntegrationTest.executor": "Run",
     "JUnit.SR_IntegrationTest.executor": "Run",
+    "JUnit.java in MyDrinkShop.executor": "Run",
     "Maven.MyDrinkShop [clean].executor": "Run",
     "Maven.MyDrinkShop [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Calin",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "valentin",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ioana/IdeaProjects/VVSS---Echipa-Fantoma/docs/Lab02",
+    "last_opened_file_path": "/home/alladin/Documents/Faculta/VVSS/VVSS---Echipa-Fantoma",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/docs/Lab02" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="drinkshop.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SREV_IntegrationTest">
-    <configuration name="ProductServiceMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.java in MyDrinkShop">
+    <configuration name="DrinkShopApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="drinkshop.DrinkShopApp" />
+      <module name="MyDrinkShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="drinkshop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductUpdateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyDrinkShop" />
       <extension name="coverage">
         <pattern>
@@ -74,7 +99,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="drinkshop.service" />
-      <option name="MAIN_CLASS_NAME" value="drinkshop.service.ProductServiceMockTest" />
+      <option name="MAIN_CLASS_NAME" value="drinkshop.service.ProductUpdateTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,21 +120,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SRE_IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyDrinkShop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="drinkshop.service.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="drinkshop.service.integration" />
-      <option name="MAIN_CLASS_NAME" value="drinkshop.service.integration.SRE_IntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SR_IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyDrinkShop" />
       <extension name="coverage">
@@ -125,18 +135,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in MyDrinkShop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyDrinkShop" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.ProductServiceMockTest" />
+      <item itemvalue="Application.DrinkShopApp" />
+      <item itemvalue="JUnit.ProductUpdateTest" />
+      <item itemvalue="JUnit.java in MyDrinkShop" />
       <item itemvalue="JUnit.SREV_IntegrationTest" />
-      <item itemvalue="JUnit.SRE_IntegrationTest" />
       <item itemvalue="JUnit.SR_IntegrationTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SREV_IntegrationTest" />
-        <item itemvalue="JUnit.SRE_IntegrationTest" />
+        <item itemvalue="JUnit.java in MyDrinkShop" />
         <item itemvalue="JUnit.SR_IntegrationTest" />
-        <item itemvalue="JUnit.ProductServiceMockTest" />
+        <item itemvalue="Application.DrinkShopApp" />
+        <item itemvalue="JUnit.ProductUpdateTest" />
+        <item itemvalue="JUnit.SREV_IntegrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +183,8 @@
       <workItem from="1774877047036" duration="16000" />
       <workItem from="1775482973985" duration="225000" />
       <workItem from="1776628365969" duration="307000" />
+      <workItem from="1778845185206" duration="1280000" />
+      <workItem from="1778846479279" duration="9902000" />
     </task>
     <servers />
   </component>
